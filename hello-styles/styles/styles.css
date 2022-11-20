@@ -1,0 +1,49 @@
+header {
+    height: 84px;
+    text-align: center;
+}
+
+nav {
+    float: right;
+    width: 712px;
+    height: 39px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: large;
+}
+
+.home-image {
+        width: 712.4px;
+        height: 311.46px;
+        border: 1px solid #000000;
+        margin-left: 60px;
+}
+
+.text {
+        width: 712px;
+        margin-left: 60px;
+        font-size: x-large;
+        text-align: center;
+}
+.abouttext {
+    width: 712px;
+    max-height: 339px;
+    margin-left: 60px;
+    font-size: x-large;
+    text-align: center;
+}
+.page {
+    width: 855px;
+    height: 1147px;
+    background: #FFFFFF;
+}
+
+.about-image {
+    /*    position: absolute;*/
+        width: 725px;
+        height: 134px;
+        border: 1px solid #000000;
+        margin-left: 60px;
+    }
