@@ -12,22 +12,24 @@
 
 
 //- Create two different variables
-
-const url = `./disneyCharactersAPI.json`; // - one will hold the URL provided
-let randomNumber = Math.floor(Math.random()*3); // - one will generate a random number from 0-50 (whole number)
+const url = `https://api.disneyapi.dev/characters`; // - one will hold the URL provided
+let randomNumber = Math.floor(Math.random()*50 +1); // - one will generate a random number from 0-50 (whole number)
+// const url = `./disneyCharactersAPI.json`; // - one will hold the URL provided
+// let randomNumber = Math.floor(Math.random()*3); // - one will generate a random number from 0-3 (whole number)
 /*
     - Create an async function called INFO that will accept two different parameters
         - the url
         - the random number
 */
 async function INFO(url, randomCharNumber) {
-    fetch(url)
+    // fetch(url)
 /* 
         - JSONify the data returned */
     try {   //  - Within the function, create a TRY/CATCH.
         let response = await fetch(url); // - TRY to fetch the url
         let results = await response.json();
         let data = results.data[randomCharNumber];
+        return data
         // - console.log 3 different positions:
         // console.log("Full Results: ", data); // - The overall promise returned * hint: use the random number to target an object within the array provided.
         // console.log("Name Value: ", data.name); // - The name of a single character
@@ -37,6 +39,8 @@ async function INFO(url, randomCharNumber) {
         console.error(error);
     }
 }
+
+
 // INFO(url, randomNumber); // - Invoke your function and pass with both variables as arguments.
 /*
 

@@ -4,23 +4,40 @@ let display = document.getElementById('display')  // - display: which will targe
 
 // - create a function called "displayChar" that calls upon the info() function within disneyFetch.js. 
 
-btn.addEventListener("click", INFO)
+btn.addEventListener("click", displayChar)
 
 function displayChar() {
+    // console.log(INFO(url, 1))
+    let randomNumber = Math.floor(Math.random()*50 +1)
+    INFO(url, randomNumber)
 
+        .then (data => {
+            console.log(data.imageUrl)
+            // console.log(data)
+            
+        //Create
+        let img = document.createElement('img')
+        
+        //Set
+        img.src = data.imageUrl
+
+
+        //Append
+        display.appendChild(img)
+        });
 
 
 //  {
 //     /*      - Create a new variable to handle the random value from 0-50. */
-    let randomCharNumber = Math.floor(Math.random()*3);
-    document.body.createElement("h1");
+    // let randomCharNumber = Math.floor(Math.random()*3);
+    // document.body.createElement("h1");
 
 // //    let document.getElementsByTagName("h1")
-    document.createElement("img");
+
 // }
 
 }
-displayChar();
+// displayChar();
 
 
     /*
